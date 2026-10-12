@@ -33,15 +33,15 @@ export const BrokeExplanations: React.FC<BrokeExplanationsProps> = () => {
   return (
     <div className="space-y-6">
       {/* Intro Header */}
-      <div className="bg-gradient-to-r from-amber-500 via-orange-500 to-amber-600 rounded-2xl p-6 text-white shadow-lg">
+      <div className="bg-gradient-to-r from-amber-500 via-orange-500 to-amber-600 rounded-2xl p-4 sm:p-6 text-white shadow-lg">
         <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/20 text-white text-xs font-semibold mb-2">
           <Lightbulb className="w-3.5 h-3.5" />
           <span>Siri "Explain Like I'm Broke" (ELIB)</span>
         </div>
-        <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
+        <h1 className="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tight">
           Ekonomi Tanpa Jargon: Cerita Realiti Malaysia
         </h1>
-        <p className="text-sm text-amber-50 mt-1 max-w-2xl">
+        <p className="text-xs sm:text-sm text-amber-50 mt-1 max-w-2xl leading-relaxed">
           Fahamkan konsep ekonomi paling kompleks dengan analogi harian seperti roti canai mamak, subsidi petrol, dan bilik darjah.
         </p>
       </div>

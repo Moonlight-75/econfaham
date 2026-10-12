@@ -22,24 +22,24 @@ export const SyllabusRoadmap: React.FC<SyllabusRoadmapProps> = ({ targetLevel })
   return (
     <div className="space-y-6">
       {/* Header Banner */}
-      <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6">
+      <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-4 sm:p-6">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div>
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-semibold mb-2 border border-blue-200">
               <Map className="w-3.5 h-3.5" />
               <span>Panduan Silibus & Strategi Skor A</span>
             </div>
-            <h1 className="text-2xl font-bold text-slate-900">
+            <h1 className="text-xl sm:text-2xl font-bold text-slate-900">
               Laluan Pembelajaran (Roadmap STPM & Degree)
             </h1>
-            <p className="text-sm text-slate-600 mt-1">
+            <p className="text-xs sm:text-sm text-slate-600 mt-1">
               Kenal pasti topik paling kerap keluar, konsep teras yang wajib dikuasai, dan perangkap soalan peperiksaan.
             </p>
           </div>
         </div>
 
-        {/* Section Selectors */}
-        <div className="flex flex-wrap gap-2 mt-4 pt-4 border-t border-slate-100 text-xs">
+        {/* Section Selectors (scrollable on mobile) */}
+        <div className="flex overflow-x-auto no-scrollbar sm:flex-wrap gap-1.5 sm:gap-2 mt-4 pt-3 border-t border-slate-100 text-xs">
           {filteredSections.map((sec, idx) => (
             <button
               key={idx}

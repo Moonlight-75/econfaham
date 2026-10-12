@@ -70,26 +70,26 @@ export const Solver: React.FC<SolverProps> = () => {
   return (
     <div className="space-y-6">
       {/* Title Header */}
-      <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6">
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-4 sm:p-6">
+        <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
           <div>
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-violet-50 text-violet-700 text-xs font-semibold mb-2 border border-violet-200">
               <Calculator className="w-3.5 h-3.5" />
               <span>Penyelesai Masalah Kuantitatif</span>
             </div>
-            <h1 className="text-2xl font-bold text-slate-900">
+            <h1 className="text-xl sm:text-2xl font-bold text-slate-900">
               Kalkulator Keseimbangan & Formula Langkah-demi-Langkah
             </h1>
-            <p className="text-sm text-slate-600 mt-1">
+            <p className="text-xs sm:text-sm text-slate-600 mt-1">
               Masukkan fungsi permintaan & penawaran anda untuk melihat pengiraan lengkap berserta jalan kerja periksa.
             </p>
           </div>
 
           {/* Sub tabs */}
-          <div className="inline-flex p-1 bg-slate-100 rounded-xl text-xs font-semibold text-slate-600 border border-slate-200">
+          <div className="flex flex-wrap sm:inline-flex p-1 bg-slate-100 rounded-xl text-xs font-semibold text-slate-600 border border-slate-200 gap-1 shrink-0">
             <button
               onClick={() => setSolverType('equilibrium')}
-              className={`px-3 py-1.5 rounded-lg transition-all ${
+              className={`flex-1 sm:flex-initial px-3 py-1.5 rounded-lg transition-all text-center whitespace-nowrap ${
                 solverType === 'equilibrium' ? 'bg-white text-indigo-700 shadow-xs' : 'hover:text-slate-900'
               }`}
             >
@@ -97,7 +97,7 @@ export const Solver: React.FC<SolverProps> = () => {
             </button>
             <button
               onClick={() => setSolverType('elasticity')}
-              className={`px-3 py-1.5 rounded-lg transition-all ${
+              className={`flex-1 sm:flex-initial px-3 py-1.5 rounded-lg transition-all text-center whitespace-nowrap ${
                 solverType === 'elasticity' ? 'bg-white text-indigo-700 shadow-xs' : 'hover:text-slate-900'
               }`}
             >
@@ -105,7 +105,7 @@ export const Solver: React.FC<SolverProps> = () => {
             </button>
             <button
               onClick={() => setSolverType('multiplier')}
-              className={`px-3 py-1.5 rounded-lg transition-all ${
+              className={`flex-1 sm:flex-initial px-3 py-1.5 rounded-lg transition-all text-center whitespace-nowrap ${
                 solverType === 'multiplier' ? 'bg-white text-indigo-700 shadow-xs' : 'hover:text-slate-900'
               }`}
             >

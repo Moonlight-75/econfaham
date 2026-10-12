@@ -69,29 +69,29 @@ export const QuickQuiz: React.FC<QuickQuizProps> = ({ langMode, targetLevel }) =
   return (
     <div className="space-y-6 max-w-3xl mx-auto">
       {/* Intro Header */}
-      <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6">
-        <div className="flex items-center justify-between">
+      <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-4 sm:p-6">
+        <div className="flex items-center justify-between gap-3">
           <div>
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 text-xs font-semibold mb-2 border border-indigo-200">
               <HelpCircle className="w-3.5 h-3.5" />
               <span>Uji Kefahaman Konsep</span>
             </div>
-            <h1 className="text-2xl font-bold text-slate-900">Kuiz Pantas Ekonomi</h1>
+            <h1 className="text-xl sm:text-2xl font-bold text-slate-900">Kuiz Pantas Ekonomi</h1>
             <p className="text-xs text-slate-500 mt-1">
               Uji kefahaman teori dan analisis graf anda dengan soalan berformat peperiksaan.
             </p>
           </div>
 
-          <div className="text-right">
-            <span className="text-xs text-slate-400 block">Skor Semasa:</span>
-            <span className="text-2xl font-black text-indigo-600">{score}</span>
+          <div className="text-right shrink-0">
+            <span className="text-[11px] sm:text-xs text-slate-400 block">Skor:</span>
+            <span className="text-xl sm:text-2xl font-black text-indigo-600">{score}</span>
             <span className="text-xs text-slate-500"> / {filteredQuestions.length}</span>
           </div>
         </div>
       </div>
 
       {!quizFinished ? (
-        <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 sm:p-8 space-y-6">
+        <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-4 sm:p-8 space-y-5 sm:space-y-6">
           {/* Question Meta */}
           <div className="flex items-center justify-between text-xs border-b border-slate-100 pb-3">
             <div className="flex items-center gap-2">
